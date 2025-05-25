@@ -1,27 +1,41 @@
 body {
   background-color: #011f3f;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", system-ui;
 }
 
 #level-title {
-  font-size: 3rem;
-  font-family: "Press Start 2P", system-ui;
-  margin: 5%;
+  font-size: 2.5rem;
+  margin: 40px 10px;
   color: #fef2bf;
 }
 
 .container {
-  display: block;
-  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 600px;
   margin: auto;
 }
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
 .btn {
-  margin: 25px;
-  display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  flex: 1 1 40%;
+  max-width: 45%;
+  aspect-ratio: 1 / 1;
+  border: 8px solid black;
   border-radius: 20%;
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 .green {
@@ -48,4 +62,35 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #level-title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  #level-title {
+    font-size: 1.2rem;
+    margin: 20px 10px;
+  }
+
+  .container {
+    gap: 10px;
+  }
+
+  .row {
+    gap: 10px;
+  }
+
+  .btn {
+    max-width: 40%;
+    border: 6px solid black;
+  }
 }
