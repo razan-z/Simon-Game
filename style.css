@@ -1,74 +1,51 @@
-/* Base Styling */
 body {
   background-color: #011f3f;
   text-align: center;
-  margin: 0;
-  padding: 0;
-  font-family: "Press Start 2P", system-ui;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
 }
 
 #level-title {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-family: "Press Start 2P", system-ui;
+  margin: 5%;
   color: #fef2bf;
-  margin: 20px 10px;
 }
 
-/* Container using grid for layout */
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  width: 90vmin;
-  max-width: 400px;
+  display: block;
+  width: 50%;
   margin: auto;
 }
-
-/* Button styling */
 .btn {
-  width: 100%;
-  aspect-ratio: 1/1;
-  border: 8px solid black;
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
   border-radius: 20%;
 }
 
 .green {
   background-color: green;
 }
+
 .red {
   background-color: red;
 }
+
 .yellow {
   background-color: yellow;
 }
+
 .blue {
   background-color: blue;
 }
 
-/* Game effects */
 .game-over {
   background-color: red;
   opacity: 0.8;
 }
+
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 480px) {
-  #level-title {
-    font-size: 1.2rem;
-    margin: 10px;
-  }
-
-  .container {
-    gap: 10px;
-    width: 90vmin;
-  }
 }
