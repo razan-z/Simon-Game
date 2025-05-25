@@ -1,96 +1,74 @@
+/* Base Styling */
 body {
   background-color: #011f3f;
   text-align: center;
   margin: 0;
   padding: 0;
   font-family: "Press Start 2P", system-ui;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #level-title {
-  font-size: 2.5rem;
-  margin: 40px 10px;
+  font-size: 2rem;
   color: #fef2bf;
+  margin: 20px 10px;
 }
 
+/* Container using grid for layout */
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 90vmin;
+  max-width: 400px;
   margin: auto;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 20px;
-}
-
+/* Button styling */
 .btn {
-  flex: 1 1 40%;
-  max-width: 45%;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  aspect-ratio: 1/1;
   border: 8px solid black;
   border-radius: 20%;
-  margin: 10px;
-  box-sizing: border-box;
 }
 
 .green {
   background-color: green;
 }
-
 .red {
   background-color: red;
 }
-
 .yellow {
   background-color: yellow;
 }
-
 .blue {
   background-color: blue;
 }
 
+/* Game effects */
 .game-over {
   background-color: red;
   opacity: 0.8;
 }
-
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  #level-title {
-    font-size: 2rem;
-  }
-
-  .btn {
-    max-width: 40%;
-  }
-}
-
+/* Responsive adjustments for smaller screens */
 @media (max-width: 480px) {
   #level-title {
     font-size: 1.2rem;
-    margin: 20px 10px;
+    margin: 10px;
   }
 
   .container {
     gap: 10px;
-  }
-
-  .row {
-    gap: 10px;
-  }
-
-  .btn {
-    max-width: 40%;
-    border: 6px solid black;
+    width: 90vmin;
   }
 }
